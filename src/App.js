@@ -12,16 +12,12 @@ const App = () => {
   const [inputName, setInputName] = useState('')
   const [user, setUser] = useState({})
   const [repositorys, setRepositorys] = useState([])
-  const [viewProfileSearch, setViewProfileSearch] = useState(false)
-  const [viewInitialPage, setInitialPage] = useState(true)
 
   const viewProfileState = (res) => {
     if (res.message === 'Not Found') {
-      setInitialPage(true)
-      setViewProfileSearch(false)
+      setUser({})
     } else {
-      setInitialPage(false)
-      setViewProfileSearch(true)
+      setUser(res)
       fetchRepository()
     }
   }
@@ -30,7 +26,6 @@ const App = () => {
     const data = await fetch(`https://api.github.com/users/${inputName}`)
     const response = await data.json()
     viewProfileState(response)
-    setUser(response) 
   }
 
   const fetchRepository = async () => {
@@ -48,8 +43,9 @@ const App = () => {
             <Button onClick={fetchData}/>
           </div> 
         </header>
-        {viewInitialPage && <InitialPage />}
-        {viewProfileSearch && <Profile data={user} repositorys={repositorys}/>}  
+        {user.id 
+        ? <Profile data={user} repositorys={repositorys} /> 
+        : <InitialPage />} 
         <Footer />
       </>
   )
