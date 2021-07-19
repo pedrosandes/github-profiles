@@ -1,19 +1,25 @@
-const Profile = (props) => {
+import Repositorys from '../repository/index'
+import './styles.css'
 
+const Profile = (props) => {
+  const {login, avatar_url, followers, public_repos, bio} = props.data
   return (
-    <>
-      {props.data.map(({login, avatar_url, bio, followers, public_repos}) => {
-        return (
-          <div>
-            <h1>{login}</h1>
-            <img src={avatar_url} alt="" />
-            <p>{bio}</p>
-            <p>Seguidores: {followers}</p>
-            <p>Repositórios públicos: {public_repos}</p>
+      <div className="container-user">
+         <div className="container-profile">
+         <div className="container-img">
+            <img src={avatar_url} alt="User avatar" className="profile-img" />
           </div>
-        );
-      })}
-    </>
+        <div className="profile">
+          <div className="profile-content">
+            <span className="profile-name">{login}</span>
+            {bio === null ? null : <span className="profile-bio">{bio}</span>}
+            <span className="profile-followers"> {followers} Seguidores</span>
+            <span className="profile-repo">{public_repos} repositórios públicos</span>
+          </div>
+        </div>
+         </div>
+        <Repositorys data={props.repositorys}/>
+      </div>
   );
 }
 

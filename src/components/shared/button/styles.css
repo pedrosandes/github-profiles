@@ -1,0 +1,17 @@
+button {
+  height: 42px;
+  padding: 0px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--white);
+  transition: all .4s ease;
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--black-secondery);
+}
