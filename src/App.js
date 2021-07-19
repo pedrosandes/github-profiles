@@ -4,6 +4,7 @@ import SearchInput from './components/shared/searchInput/index'
 import Button from './components/shared/button/index'
 import Profile from './components/shared/profile/index'
 import InitialPage from './components/shared/initialPage/index'
+import Footer from './components/shared/footer/index'
 import './App.css'
 
 const App = () => {
@@ -44,11 +45,12 @@ const App = () => {
         <header className="bg-header">
           <div className="container">
             <SearchInput onChange={(e) => setInputName(e.target.value)} />
-            <Button onClick={() => fetchData()}/>
+            <Button onClick={fetchData}/>
           </div> 
         </header>
         {viewInitialPage && <InitialPage />}
         {viewProfileSearch && <Profile data={user} repositorys={repositorys}/>}  
+        <Footer />
       </>
   )
 }

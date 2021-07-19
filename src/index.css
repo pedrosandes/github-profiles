@@ -35,3 +35,9 @@ a {
 a:hover {
   color: var(--link-secondery);
 }
+
+@media screen and (max-width: 872px) {
+  body {
+   background-color: var(--black-secondery);
+  }
+}

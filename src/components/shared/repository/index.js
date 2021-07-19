@@ -8,7 +8,7 @@ const Repositorys = (props) => {
           <div className="repository" key={name}>
             <h1>{name}</h1>
             <p>Descrição:  {description === null ? 'Descrição não informada' : description}</p>
-            <a href={svn_url} target='_blank' rel="author">Ir para repositório</a>
+            <a className="link" href={svn_url} target='_blank' rel="author">Ir para repositório</a>
           </div>
         );
       })}

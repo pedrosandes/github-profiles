@@ -5,7 +5,7 @@
   background-color: var(--black-secondery);
   border-radius: 5px;
   box-sizing: border-box;
-
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -42,9 +42,6 @@
 .container-img {
   width: 497px;
   height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 img {
@@ -69,4 +66,24 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+@media screen and (max-width: 872px) {
+  .container-profile {
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 532px) {
+  .container-img, .profile {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .container-img, .profile {
+    width: 280px;
+  }
 }

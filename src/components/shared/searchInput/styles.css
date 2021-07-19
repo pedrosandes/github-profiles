@@ -11,3 +11,9 @@ input {
 input:focus {
   border: 1px solid var(--link-primary);
 }
+
+@media screen and (max-width: 361px) {
+  input {
+    width: 157px;
+  }
+}

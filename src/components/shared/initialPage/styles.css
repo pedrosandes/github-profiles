@@ -1,8 +1,10 @@
 .container-initial {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 162px);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .initial-text {
@@ -15,4 +17,10 @@
   border: 1px solid var(--link-primary);
   width: 500px;
   height: 200px;
+}
+
+@media screen and (max-width: 832px) {
+  .container-initial {
+   min-height: calc(100vh - 63px);
+  }
 }

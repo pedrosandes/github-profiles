@@ -1,0 +1,11 @@
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--black-secondery);
+}
+
+@media screen and (max-width: 832px) {
+  footer {
+  border-top: 1px solid var(--link-primary);
+  }
+}
