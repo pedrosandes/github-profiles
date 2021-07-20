@@ -1,8 +1,8 @@
 import './styles.css'
 
-const Button = (props) => {
+const Button = ({onClick, children}) => {
   return (
-    <button onClick={props.onClick}>Procurar</button>
+    <button onClick={onClick}>{children}</button>
   );
 }
 

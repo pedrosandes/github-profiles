@@ -40,7 +40,7 @@ const App = () => {
         <header className="bg-header">
           <div className="container">
             <SearchInput onChange={(e) => setInputName(e.target.value)} />
-            <Button onClick={fetchData}/>
+            <Button onClick={fetchData}>Procurar</Button>
           </div> 
         </header>
         {user.id 

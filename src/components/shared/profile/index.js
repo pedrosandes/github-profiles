@@ -1,8 +1,8 @@
 import Repositorys from '../repository/index'
 import './styles.css'
 
-const Profile = (props) => {
-  const {login, avatar_url, followers, public_repos, bio} = props.data
+const Profile = ({data,repositorys}) => {
+  const {login, avatar_url, followers, public_repos, bio} = data
   return (
       <div className="container-user">
          <div className="container-profile">
@@ -18,7 +18,7 @@ const Profile = (props) => {
           </div>
         </div>
          </div>
-        <Repositorys data={props.repositorys}/>
+        <Repositorys data={repositorys}/>
       </div>
   );
 }

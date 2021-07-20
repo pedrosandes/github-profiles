@@ -1,6 +1,6 @@
 import './styles.css'
 
-const SearchInput = (props) => {
+const SearchInput = ({onChange}) => {
 
   return (
     <>
@@ -8,7 +8,7 @@ const SearchInput = (props) => {
       id ="searchInput" 
       type="text"
       placeholder="Procurar perfil"
-      onChange={props.onChange}
+      onChange={onChange}
       />
     </>
   );

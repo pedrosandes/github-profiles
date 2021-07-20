@@ -1,9 +1,9 @@
 import "./styles.css"
 
-const Repositorys = (props) => {
+const Repositorys = ({data}) => {
   return (
     <div className="container-repositorys">
-      {props.data.map(({name, svn_url, description}) => {
+      {data.map(({name, svn_url, description}) => {
         return (
           <div className="repository" key={name}>
             <h1>{name}</h1>
